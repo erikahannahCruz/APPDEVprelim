@@ -3,25 +3,35 @@
     to {transform: translateX(-50%)}
   }
 
+/*header*/
 @font-face {
     font-family: header ;
     font-weight: bolder;
     src: url(./fonts/RobotoMono/static/RobotoMono-Bold.ttf);
 }
 
+/*subheader*/
 @font-face {
     font-family: subheader ;
     font-weight: bold;
     src: url(./fonts/RobotoMono/static/RobotoMono-SemiBoldItalic.ttf);
 }
 
+/*subtitle*/
 @font-face {
     font-family: subtitle ;
     src: url(./fonts/JetBrainsMono/fonts/ttf/JetBrainsMono-Medium.ttf);
 }
 
+/*hide scrollbar*/
 ::-webkit-scrollbar {
   display: none;
+}
+
+/*supposedly to make images not warp*/
+* {padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html , body {
@@ -64,11 +74,17 @@ html , body {
 }
 
 .divPicture {
-
+  display: flex;
+  flex-direction: column-reverse;
+  column-gap: 20px;
+  align-items: center;
+  font-family: subheader;
+  font-size: 30px;
+  padding-bottom: 50px;
 }
 
 .imgPicture {
-  
+  padding-bottom: 10px;
   width: 350px ;
   height: auto;
 }
