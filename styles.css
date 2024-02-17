@@ -23,6 +23,7 @@
     src: url(./fonts/JetBrainsMono/fonts/ttf/JetBrainsMono-Medium.ttf);
 }
 
+/*custom color declarations*/
 :root {
   --black: #262529 ;
   --white: #FAF9F7 ;
@@ -44,135 +45,15 @@
   box-sizing: border-box;
 }
 
-html , body {
+/*---------General Declarations---------*/
+  html , body {
   margin: 0;
   padding: 0 ; 
   overflow-x: clip;
   background-color:var(--var(--white));
-}
+  }
 
-.divCartoon {
-  position: static;
-  width: 100;
-  max-width: 100%;
-  height: fit-content;
-  max-height: 100%;
-  text-align: center;
-  background-color: var(--var(--black));
-}
-
-.divBlack {
-  width: 100%;
-  max-width: 100%;
-  height: fit-content;
-  text-align: center;
-  background-color: var(--black);
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-}
-
-.divPictureCompilation {
-  background-color: var(--white);
-  font-family: header ; 
-  text-align: center ;
-  font-size: 50px ;
-  padding-top: 10px ;
-  align-items: center;
-  z-index: 2;
-}
-
-.divPicture {
-  display: flex;
-  flex-direction: column-reverse;
-  column-gap: 20px;
-  align-items: center;
-  font-family: subheader;
-  font-size: 30px;
-  padding-bottom: 50px;
-}
-
-.imgPicture {
-  padding-bottom: 10px;
-  width: 350px ;
-  height: auto;
-}
-
-.vid {
-
-}
-
-.divTriviaText {
-  color: var(--white);
-  text-align: center;
-  font-family: subtitle;
-  padding: 5px;
-}
-
-.divTriviaHeader {
-  color: var(--white);
-  text-align: center ;
-  font-size: 40px ;
-  font-family: header;
-}
-
-.flex-container-col {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 100%;
-  align-items: center;
-  gap: 10px;
-}
-
-.flex-container-row {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-items: center;
-  gap: 10px;
-}
-
-.footnote {
-  font-family: subtitle;
-  font-size: small;
-  border: none;
-  color: var(--black);
-  background-color: var(--white);
-}
-
-.imgAnatomy {
-  width: 500px;
-  height: auto;
-}
-
-.imgIntroLid {
-  position: absolute;
-  z-index: 2 ; 
-  top: 0 px; 
-  max-width: 100% ;
-  height: auto;
-}
-
-.imgIntroCartoon {
-  max-width: 100% ;
-  position: sticky;
-  top: 0;
-  height: auto;
-  z-index: 0 ; 
-  background-color: #132411;
-}
-
-.imgIntroBaby {
-  width: 350px;
-  height: auto;
-  border: 3px solid var(--black);
-  z-index: 2;
-  background-color: var(--white);
-}
-
-p {
+  p {
   font-family: subtitle;
   font-size: 25px;
   outline-offset: 3px;
@@ -184,64 +65,134 @@ p {
   margin-bottom: 0;
   z-index: 2;
   background-color: var(--white);
-}
+  }
 
-.tblHeader {
-  border: 3px solid var(--black);
-  background-color: var(--black);
-  font-family: subheader;
-  font-size: 50px;
-  color: var(--white);
-  text-align: center;
-  width:inherit;
+  img , video {
+  border-radius: 25px;
+  }
 
-}
-
-table {
+  table {
   width: inherit;
   background: var(--white);
-}
+  padding: 0;
+  }
 
-th {
+  th {
   font-family: subheader;
   font-size: large;
   text-align: right;
   padding-right: 10px;
   vertical-align: middle;
   height: 50px;
-}
+  }
 
-td {
+  td {
   font-family: subtitle;
   font-size: medium;
   padding-left: 10px;
   width: wrap;
-}
+  }
 
-th , td {
+  th , td {
   border: 3px solid var(--black);
   max-width: fit-content;
-}
+  }
 
-.grid-container {
+/*---------containers, grids---------*/
+  .flex-container-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  gap: 10px;
+  }
+
+  .flex-container-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  }
+
+  .grid-container {
   display: grid;
-}
+  }
+
+  .divBlack {
+  width: 100%;
+  max-width: 100%;
+  height: fit-content;
+  text-align: center;
+  background-image: linear-gradient(to bottom , var(--black) , black) ; 
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  }
+
+/*---------INTRODUCTION---------*/
+
+  #divCartoon {
+  width: 100;
+  max-width: 100%;
+  height: fit-content;
+  max-height: 100%;
+  text-align: center;
+  background-color: var(--var(--black));
+  }
+
+  #introPar {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  z-index: 2;
+  width: 100%;
+  height: fit-content;
+  }
+
+  #imgIntroLid {
+  position: absolute;
+  z-index: 2 ; 
+  top: 0 px; 
+  max-width: 100% ;
+  height: auto;
+  border-radius: 0;
+  }
+
+  #imgIntroCartoon {
+  max-width: 100% ;
+  position: sticky;
+  top: 0;
+  height: auto;
+  z-index: 0 ; 
+  background-color: var(--greendark);
+  border-radius: 0;
+  }
+
+  .imgIntroBaby {
+  width: 350px;
+  height: auto;
+  z-index: 2;
+  background-color: var(--white);
+  border-radius: 0;
+  }
 
 /*---------INFINITELY SCROLLING HORIZONTAL TEXT BAR---------*/
 
-.container {
+  .container {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
   z-index: 2;
-}
+  }
 
-.horizontal-scrolling-items {
+  .horizontal-scrolling-items {
   display: flex;
   background-color: var(--black);
-}
+  }
 
-.horizontal-scrolling-items__item {
+  .horizontal-scrolling-items__item {
   white-space: nowrap;
   font-family: subtitle;
   font-size: 20px;
@@ -251,7 +202,117 @@ th , td {
   animation-timing-function: linear;
   color: var(--white);
   padding: 0 5rem;
-}
+  }
 
-/*---------INFINITELY SCROLLING HORIZONTAL TEXT BAR ---------*/
+/*---------Stats---------*/
 
+  #imgAnatomy {
+  width: 500px;
+  height: auto;
+  margin: 0 ; 
+  }
+
+  .tblHeader {
+  border: 3px solid var(--black);
+  background-color: var(--black);
+  font-family: subheader;
+  font-size: 50px;
+  color: var(--white);
+  text-align: center;
+  width:inherit;
+  padding: 0;
+  }
+
+  .footnote {
+  font-family: subtitle;
+  font-size: small;
+  border: none;
+  color: var(--black);
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  }
+
+  #imgAnatomy {
+  width: 500px;
+  height: auto;
+  margin: 0 ; 
+  }
+
+/*---------TRIVIA---------*/
+  .divTriviaText {
+  color: var(--white);
+  text-align: center;
+  font-family: subtitle;
+  padding: 5px;
+  }
+
+  .divTriviaHeader {
+  color: var(--white);
+  text-align: center ;
+  font-size: 40px ;
+  font-family: header;
+  }
+
+/*---------PICTURE AND VIDEO COMPILATION---------*/
+  #compilationHeader {
+  font-family: header;
+  font-size: 50px;
+  color: var(--black);
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0 ; 
+  text-decoration: underline;
+  }
+
+  #divCompilation {
+  background-image: linear-gradient(to bottom , var(--greenlight) , var(--greenmid) , var(--greendark)) ; 
+  padding-top: 30px;
+  padding-bottom: 30px;
+  }
+
+  .imgPicture {
+  padding-bottom: 10px;
+  width: 350px ;
+  height: 500px;
+  object-fit: cover;
+  }
+
+  video {
+  object-fit: cover ; 
+  object-position: 0%;
+  width: 500px ;
+  height: 500px ;
+  }
+
+  .divPicture {
+  display: flex;
+  flex-direction: column-reverse;
+  column-gap: 20px;
+  align-items: center;
+  font-family: subheader;
+  font-size: 30px;
+  }
+
+  .divPicture1 {
+  display: flex;
+  flex-direction: column-reverse;
+  column-gap: 20px;
+  align-items: center;
+  font-family: subheader;
+  font-size: 30px;
+  color: var(--white);
+  }
+
+/*---------Last footnote---------*/
+  #footestnote {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: var(--white);
+    font-family: subtitle;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+  }

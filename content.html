@@ -11,23 +11,24 @@
             <div class="divBlack">
                 <div class="divTriviaHeader"> All about my cat... </div>
                 </div>
+            
+            <!--Intro Cartoon with Sticky-->
+            <div>
+                <img id="imgIntroLid" src="./pictures/eyelids.png">
+                <img id="imgIntroCartoon" src="./pictures/cat.png">
+            </div>
         
 
     </head>
 
     <body> 
-
         <!--INTRO SEQEUENCE-->
         <div>
-
-        <!--Intro Cartoon with Sticky-->
-                <img class="imgIntroLid" src="./pictures/eyelids.png">
-                <img class="imgIntroCartoon" src="./pictures/cat.png">
-        
-        <!--Infinitely horizontal scrolling text "Read all about it!"-->
-        <div class="flex-container-row">
-            <div class="container">
-            <div class="horizontal-scrolling-items">
+            
+            <!--Infinitely horizontal scrolling text "Read all about it!"-->
+            <div class="flex-container-row">
+                <div class="container">
+                    <div class="horizontal-scrolling-items">
             
                 <div class="horizontal-scrolling-items__item">
                 Read all about it!
@@ -44,21 +45,20 @@
                 <div class="horizontal-scrolling-items__item">
                     Read all about it!
                     </div>              
-            </div>
-              
+                    </div>
                 </div>
             </div>
 
-        <!--Intro paragraph and images-->
-        <div class="flex-container-row">
-            <img class="imgIntroBaby" src="./pictures/baby.png">
-            <p> 
-                Born at around the first week of November 2020, Salem was seemingly abandoned by his biological cat mother at just around <span style="font-weight: bold">4 weeks old</span>. He was found alone in front of the Cruz residence shivering from the cold, yet meowing as loud as he could for help. He was finally picked up by Erika's dad in the morning of December 17, 2020   as they were getting ready to leave for work, leaving Erika alone with a new kitten that day. 
-            
-                <br><br>Despite having a rough kittenhood - pot-bellied, dirty, and malnourished - Salem grew up to be a healthy boy with an attitude   similar to his namesake and a coat as <span style="font-weight: bolder;">soft as velvet</span>.
-            </p>
-            <img class="imgIntroBaby" src="./pictures/closeup.png">
-            </div>
+            <!--Intro paragraph and images-->
+            <div class="flex-container-row" id="introPar">
+                <img class="imgIntroBaby" src="./pictures/baby.png">
+                <p> 
+                    Born at around the first week of November 2020, Salem  was seemingly abandoned by his biological cat mother at just around <span style="font-weight: bold">4 weeks old</span>. He was found alone in front of the Cruz residence shivering from the cold, yet meowing as loud as he could for help. He was finally picked up by Erika's dad in the morning of December 17, 2020 as they were getting ready to leave for work, leaving Erika alone with a new kitten that day. 
+                
+                    <br><br>Despite having a rough kittenhood - pot-bellied,    dirty, and malnourished - Salem grew up to be a healthy    boy with an attitude   similar to his namesake and a   coat as <span style="font-weight: bolder;">soft as    velvet</span>.
+                </p>
+                <img class="imgIntroBaby" src="./pictures/closeup.png">
+                </div>
 
         </div>
 
@@ -71,12 +71,17 @@
                     <div class="tblHeader">STATS:</div>
                     
                     <tr>
+                        <th>Full Government Name</th>
+                        <td>Salem Lu Cruz</td>
+                        </tr>
+
+                    <tr>
                         <th>Official* 
                             <br>Birthday</th>
                         <td>November 07, 2020</td>
                         </tr>
-                    
-                    
+
+
                     <tr>
                         <th>Gender</th>
                         <td>Male</td>
@@ -113,7 +118,7 @@
 
                 </div>
 
-                <img class="imgAnatomy" src="./pictures/anatomy.png">
+                <img id="imgAnatomy" src="./pictures/anatomy.png">
             </div>
         </div>
 
@@ -128,8 +133,10 @@
         </div>
 
         <!--Picture & Video Compilation-->
-        <div class="divPictureCompilation">
-            <div>Past Hobbies/Jobs</div>
+        <div id="divCompilation">
+            <div id="compilationHeader" class="flex-container-row">Past Hobbies/Jobs</div>
+
+            <div style="padding-top: 50px;"></div>
 
             <div class="flex-container-row">
                 <div class="divPicture"> 
@@ -147,6 +154,8 @@
                 </div>
             </div>
 
+            <div style="padding-top: 50px;"></div>
+
             <div class="flex-container-row">
                 <div class="divPicture"> Vegetarian
                     <img class="imgPicture" src="./pictures/vegetarian.jpg">
@@ -157,21 +166,31 @@
                 </div>
 
                 <div class="divPicture"> Pilipit
-                    <img class="imgPicture" src="./pictures/pilipit.png"> 
+                    <img class="imgPicture" src="./pictures/pilipit.png" style="background-color: #0F400B;"> 
                 </div>
             </div>
 
+            <div style="padding-top: 50px;"></div>
+
             <div class="flex-container-row">
-                <div class="vid"> Professional Cleaner
-                    <video class="imgPicture" src="./pictures/cleaner.mp4">    
+                <div class="divPicture1"> Professional Cleaner
+                    <video id="vidCleaner" controls muted>
+                        <source src="./pictures/cleaner.mp4" type="video/mp4">    
+                        Your browser does not support the video tag.
+                    </video> 
                 </div>
-                <div class="vid"> Excavator 
-                    <video class="imgPicture" src="./pictures/excavator.mp4"></video>
+
+                <div class="divPicture1"> Excavator
+                    <video id="vidExcavator" controls muted>
+                        <source src="./pictures/excavator.mp4" type="video/mp4">   
+                        Your browser does not support the video tag. 
+                    </video> 
                 </div>
             </div>
                 
         </div>
 
+        <div id="footestnote">Thanks for viewing! :^)</div>
 
         </body>
 
