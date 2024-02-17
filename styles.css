@@ -23,6 +23,16 @@
     src: url(./fonts/JetBrainsMono/fonts/ttf/JetBrainsMono-Medium.ttf);
 }
 
+:root {
+  --black: #262529 ;
+  --white: #FAF9F7 ;
+  --grey: #7D7777 ; 
+  --greendark: #0F400B ; 
+  --greenmid: #87C23D ; 
+  --greenlight: #9AE4B3 ;
+}
+
+
 /*hide scrollbar*/
 ::-webkit-scrollbar {
   display: none;
@@ -37,19 +47,18 @@
 html , body {
   margin: 0;
   padding: 0 ; 
-  overflow-x: hidden;
-  background-color:rgb(239, 237, 233);
+  overflow-x: clip;
+  background-color:var(--var(--white));
 }
 
-.divIntro {
-  width: 100%;
+.divCartoon {
+  position: static;
+  width: 100;
   max-width: 100%;
-  height: 100%;
+  height: fit-content;
   max-height: 100%;
-  padding-top: 100px ; 
-  padding-bottom: 100px;
   text-align: center;
-  background-color: black;
+  background-color: var(--var(--black));
 }
 
 .divBlack {
@@ -57,7 +66,7 @@ html , body {
   max-width: 100%;
   height: fit-content;
   text-align: center;
-  background-color: black;
+  background-color: var(--black);
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 30px;
@@ -65,12 +74,13 @@ html , body {
 }
 
 .divPictureCompilation {
-  background-color: whitesmoke;
+  background-color: var(--white);
   font-family: header ; 
   text-align: center ;
   font-size: 50px ;
   padding-top: 10px ;
   align-items: center;
+  z-index: 2;
 }
 
 .divPicture {
@@ -89,15 +99,19 @@ html , body {
   height: auto;
 }
 
+.vid {
+
+}
+
 .divTriviaText {
-  color: whitesmoke;
+  color: var(--white);
   text-align: center;
   font-family: subtitle;
   padding: 5px;
 }
 
 .divTriviaHeader {
-  color: white;
+  color: var(--white);
   text-align: center ;
   font-size: 40px ;
   font-family: header;
@@ -108,19 +122,24 @@ html , body {
   flex-direction: column;
   width: 100%;
   max-width: 100%;
+  align-items: center;
+  gap: 10px;
 }
 
 .flex-container-row {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 100%;
+  align-items: center;
+  gap: 10px;
 }
 
 .footnote {
   font-family: subtitle;
   font-size: small;
   border: none;
+  color: var(--black);
+  background-color: var(--white);
 }
 
 .imgAnatomy {
@@ -129,7 +148,7 @@ html , body {
 }
 
 .imgIntroLid {
-  position: sticky;
+  position: absolute;
   z-index: 2 ; 
   top: 0 px; 
   max-width: 100% ;
@@ -138,38 +157,49 @@ html , body {
 
 .imgIntroCartoon {
   max-width: 100% ;
-  position: relative;
+  position: sticky;
+  top: 0;
   height: auto;
-  z-index: 1 ; 
-  background-color: black;
+  z-index: 0 ; 
+  background-color: #132411;
 }
 
 .imgIntroBaby {
   width: 350px;
   height: auto;
-  border-bottom: 3px solid black;
+  border: 3px solid var(--black);
+  z-index: 2;
+  background-color: var(--white);
 }
 
 p {
   font-family: subtitle;
-  font-size: 15px;
+  font-size: 25px;
   outline-offset: 3px;
   outline-width: 3px;
-  outline-color: black;
-  border: 3px solid black;
+  outline-color: var(--black);
+  border: 3px solid var(--black);
   padding: 10px;
   margin-top: 0;
   margin-bottom: 0;
+  z-index: 2;
+  background-color: var(--white);
 }
 
 .tblHeader {
-  border: 3px solid black;
-  background-color: black;
+  border: 3px solid var(--black);
+  background-color: var(--black);
   font-family: subheader;
   font-size: 50px;
-  color: white;
+  color: var(--white);
   text-align: center;
+  width:inherit;
 
+}
+
+table {
+  width: inherit;
+  background: var(--white);
 }
 
 th {
@@ -189,7 +219,7 @@ td {
 }
 
 th , td {
-  border: 3px solid black;
+  border: 3px solid var(--black);
   max-width: fit-content;
 }
 
@@ -203,11 +233,12 @@ th , td {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  z-index: 2;
 }
 
 .horizontal-scrolling-items {
   display: flex;
-  background-color: black;
+  background-color: var(--black);
 }
 
 .horizontal-scrolling-items__item {
@@ -218,7 +249,7 @@ th , td {
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  color: white;
+  color: var(--white);
   padding: 0 5rem;
 }
 
