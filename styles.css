@@ -3,21 +3,21 @@
     to {transform: translateX(-50%)}
   }
 
-/*header*/
+/*header font*/
 @font-face {
     font-family: header ;
     font-weight: bolder;
     src: url(./fonts/RobotoMono/static/RobotoMono-Bold.ttf);
 }
 
-/*subheader*/
+/*subheader font*/
 @font-face {
     font-family: subheader ;
     font-weight: bold;
     src: url(./fonts/RobotoMono/static/RobotoMono-SemiBoldItalic.ttf);
 }
 
-/*subtitle*/
+/*subtitle font*/
 @font-face {
     font-family: subtitle ;
     src: url(./fonts/JetBrainsMono/fonts/ttf/JetBrainsMono-Medium.ttf);
