@@ -47,6 +47,11 @@
   background-color:var(--var(--white));
   }
 
+img , video {
+  border-radius: 25px;
+  align-self: center;
+  }
+
   p {
   font-family: subtitle;
   font-size: 20px;
@@ -59,12 +64,6 @@
   z-index: 2;
   background-color: var(--white);
   }
-
-  img , video {
-  border-radius: 25px;
-  align-self: center;
-  }
-
 
   table {
   width: inherit;
