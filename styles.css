@@ -39,12 +39,6 @@
   display: none;
 }
 
-/*supposedly to make images not warp*/
-* {padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 /*---------General Declarations---------*/
   html , body {
   margin: 0;
@@ -55,21 +49,22 @@
 
   p {
   font-family: subtitle;
-  font-size: 25px;
+  font-size: 20px;
   outline-offset: 3px;
   outline-width: 3px;
   outline-color: var(--black);
   border: 3px solid var(--black);
   padding: 10px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: -1;
   z-index: 2;
   background-color: var(--white);
   }
 
   img , video {
   border-radius: 25px;
+  align-self: center;
   }
+
 
   table {
   width: inherit;
@@ -116,6 +111,12 @@
   gap: 10px;
   }
 
+  @media (max-width: 800px) {
+    .flex-container-row {
+      flex-flow: column wrap;
+    }
+  }
+
   .grid-container {
   display: grid;
   }
@@ -135,10 +136,6 @@
 /*---------INTRODUCTION---------*/
 
   #divCartoon {
-  width: 100;
-  max-width: 100%;
-  height: fit-content;
-  max-height: 100%;
   text-align: center;
   background-color: var(--var(--black));
   }
@@ -151,23 +148,16 @@
   height: fit-content;
   }
 
-  #imgIntroLid {
-  position: absolute;
-  z-index: 2 ; 
-  top: 0 px; 
-  max-width: 100% ;
-  height: auto;
-  border-radius: 0;
-  }
-
   #imgIntroCartoon {
-  max-width: 100% ;
   position: sticky;
   top: 0;
-  height: auto;
   z-index: 0 ; 
   background-color: var(--greendark);
   border-radius: 0;
+  object-fit: cover;
+  object-position: 0% 35%;
+  height: 500px;
+  width: 100%;
   }
 
   .imgIntroBaby {
